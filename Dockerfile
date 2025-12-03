@@ -1,3 +1,7 @@
+# 【筆記】
+#  1.該方式可以避免在本地构建時出現的問題，因為它會在容器內部直接運行 Maven 命令。
+#  拉取mven鏡像 --》 2)在容器內部運行 Maven 命令 --》 3)將生成的 jar 包複製到宿主機 --》 4)使用更輕的 JDK 鏡像運行應用  --》 5)暴露端口 8080 --》 6)啟動應用
+#   test
 # 第 1 阶段：Maven 构建阶段  1)拉取mavne鏡像
 FROM maven:3.9.6-eclipse-temurin-17 AS builder
 WORKDIR /app
